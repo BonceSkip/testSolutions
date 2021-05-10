@@ -34,6 +34,12 @@ public class SolucionBTest {
         long result = SolucionB.repeatedString(inputA, new Long("942885108885"));
         long endTime = System.currentTimeMillis() - startTime;
         System.out.println("Time: " + endTime);
-        assertEquals(new Long("51574523448").longValue(), result);
+        // dado que el input string tiene un largo de 100 y contiene 35 coincidencias de 'a',
+        // se calcula 9428851088 * 35 = 330,009,788,080‬;
+        // para llegar al número de caracteres se cuentan los 85 primeros, siendo: 
+        // 'aadcdaccacabdaabadadaabacdcbcacabbbadbdadacbdadaccbbadbdcadbdcacacbcacddbcbbbaaccbadd'
+        // y teniendo 27 coincidencias de 'a'
+        // entonces el resultado final es 330,009,788,080 + 27 = 330,009,788,107
+        assertEquals(new Long("330009788107").longValue(), result);
     }
 }
